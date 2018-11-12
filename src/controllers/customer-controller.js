@@ -1,6 +1,7 @@
 const ValidatorContract = require("../validators/validator");
 const repository = require("../repositories/customer-repository");
-// const emailService = require("../services/email-service"); SENGRID
+const emailService = require("../services/email-service");
+SENGRID;
 const authService = require("../services/auth.service");
 const md5 = require("md5");
 
@@ -92,11 +93,11 @@ exports.post = async (req, res, next) => {
       roles: ["user"]
     });
 
-    // emailService.send(                                       SENDGRID
-    //   req.body.email,                                        SENDGRID
-    //   "Bem vindo ao Node Store",                             SENDGRID
-    //   global.EMAIL_TMPL.replace("{0}", req.body.name)        SENDGRID
-    // );
+    emailService.send(
+      req.body.email,
+      "Bem vindo ao Node Store",
+      global.EMAIL_TMPL.replace("{0}", req.body.name)
+    );
 
     res.status(200).send({ message: "Cliente cadastrado com sucesso" });
   } catch (e) {
