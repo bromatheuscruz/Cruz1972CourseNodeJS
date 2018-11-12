@@ -1,5 +1,5 @@
 # node-str
-09/11 ~ 11/11 com NodeJs e Angular
+09/11 ~ 11/11 com NodeJs e Angular com balta.io
 
 Utilizei nesse projeto de aprendizado:
 
